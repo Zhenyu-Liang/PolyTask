@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>PolyTask</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="drag.js"></script>
+    <script src="window.js"></script>
+    <script src="appearance.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <script src="saveNote.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div style="float:left">
+            <img src="favicon.ico" width="40px" height="40px"></img>
+        </div>
+        <div id="header-title-container" class="header-item">
+            <h2>PolyTask</h2>
+        </div>
+        <div id="add-button" class="header-item">
+            <div id="plus-button">+</div>
+            <div class="drop-down">
+                <div onclick="addNote()">Notes</div>
+                <div onclick="addDictionary()">Dictionary</div>
+                <div onclick="addCalculator()">Calculator</div>
+                <div onclick="addTimer()">Timer/Clock</div>
+                <div onclick="addSnake()">Snake</div>
+            </div>
+        </div>
+        <div id="appearance-toggle" class="header-item">
+            <div id="darklight-button">◐</div>
+            <div class="drop-down">
+                <div id="automode-button" onclick="auto()">auto</div>
+                <div id="lightmode-button" onclick="lightmode()">light</div>
+                <div id="darkmode-button" onclick="darkmode()">dark</div>
+            </div>
+        </div>
+        <div id="clear-windows-btn" class="header-item" onclick="clearAllWindows()">×</div>
+    </div>
+
+
+
+    <div id="main-container">
+
+    </div>
+
+</body>
+
+</html>

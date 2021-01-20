@@ -1,0 +1,296 @@
+body {
+    font-family: Roboto, sans-serif;
+    background-color: rgb(255, 133, 51);
+}
+
+
+.tabs {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f1f1f1d0;
+}
+
+.tabs button {
+    background-color: transparent;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: 0.3s;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+
+.tabs button:hover {
+    color: black;
+    background-color: #ffffff60;
+}
+
+.tabs button:active{
+    background-color: #ffffff90;
+}
+
+.tabs button.opened {
+    background-color: #ffffffa0;
+}
+
+.tabContent {
+    display: none;
+    border-top: none;
+
+}
+
+h1 {
+    color: white;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}
+
+#countDownTimerContainer {
+    background-color:#f1f1f1d0;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+#cdt-input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.cdt-input{
+    background-color: #c0c0c0a0;
+    border:none;
+    border-radius: 5px;
+    font-size: 15vmin;
+    width:20vmin;
+    margin:10px;
+    text-align: center;
+}
+
+
+
+
+.timer-cdt {
+    justify-self: center;
+    align-self: center;
+    border: none;
+    background-color: #ffffff00;
+    font-size:1 50px;
+    width: 75px;
+    height: 30px;
+}
+
+
+.semi {
+    font-size: 10vmin;
+}
+
+.btn {
+    border-radius: 5px;
+    width: 30vmin;
+    margin-left: 5px;
+    margin-right: 5px;
+    border:none;
+    font-size: 10vmin;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+
+/* StopWatch */
+
+
+
+.btn-swc {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 30vmin;
+    margin-left: 5px;
+    margin-right: 5px;
+    border:none;
+    font-size: 10vmin;
+    text-align: center;
+}
+
+
+
+
+.btn-swc:hover {
+    background-color: #ccc;
+}
+
+
+
+
+#stopWatchContainer {
+    background-color:#f1f1f1d0;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+
+#show-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 15vmin;
+    margin:15px;
+}
+
+
+
+/* Clock */
+#clockContainer {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+
+.clock {
+    position: relative;
+    width:50vmin;
+    height:50vmin;
+    border-radius: 50%;
+    border: 10px solid black;
+    background-color: rgba(255,255,255,0.2);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+
+.time-num {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+    font-size: 2vmin;
+    font-weight: bolder;
+} 
+
+
+
+.num1 
+{
+    --rotation: 30deg;
+}
+
+.num2 
+{
+    --rotation: 60deg;
+}
+.num3 
+{
+    --rotation: 90deg;
+}
+.num4 
+{
+    --rotation: 120deg;
+}
+.num5 
+{
+    --rotation: 150deg;
+}
+
+.num6 
+{
+    --rotation: 180deg;
+}
+.num7
+{
+    --rotation: 210deg;
+}
+
+.num8 
+{
+    --rotation: 240deg;
+}.num9 
+{
+    --rotation: 270deg;
+}
+
+.num10 
+{
+    --rotation: 300deg;
+}
+.num11 
+{
+    --rotation: 330deg;
+}
+
+
+/* some time pointer or whatever it is called */
+.time-pointer {
+    position: absolute;
+    background-color: black;
+    right: 50%;
+    bottom: 50%;
+    --rotation: 0;
+    transform: translateX(50%) rotate(calc(var(--rotation)*1deg));
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index:10;
+}
+
+
+.time-secs {
+    width: 1vmin;
+    height: 45%;
+    background-color: red;
+}
+
+.time-mins {
+    width: 2vmin;
+    height: 40%;
+    background-color: black;
+}
+
+.time-hour {
+    width: 2.5vmin;
+    height: 35%;
+    background-color: grey;
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 5vmin;
+    height: 5vmin;
+    left: calc(50% - 2.5vmin);
+    top: calc(50% - 2.5vmin);
+    z-index: 11;
+    border-radius: 50%;
+}
+
+
+.current-time {
+    position: absolute;
+    bottom: 0px;
+    font-size: 6vmin;
+    margin:0;
+    background-color: rgba(255,255,255,0.4);
+    display: block;
+    border-radius: 5px;
+    line-height: 0px;
+    padding: 0px 15px 0px 15px;
+}
